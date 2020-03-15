@@ -38,7 +38,7 @@ export const styles = {
     marginTop: '2rem'
   },
   score: {
-    margin: '0 10%',
+    margin: '2% 10%',
     textAlign: 'center',
     boxShadow: '0 4px 8px rgba(0,0,0,0.4)',
     padding: '4px',
