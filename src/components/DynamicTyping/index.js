@@ -34,14 +34,14 @@ export default class DynamicTyping extends Komponent {
     const rawScore = (endTime - this.state.startTime)/1000
     const textLength = this.state.text.split(' ').length
     const minuteRatio = 60/rawScore
-    const challengeLength = this.state.words.split(' ').length
     const wordsPerMinute = textLength * minuteRatio
     const delimmiter = /\s*/
+    const challengeLength = this.state.words.split(delimmiter).length
     const accuracy = this.state.words.split(delimmiter).reduce(
       (value,word,index)=> {
-      if (word === this.state.text.split(delimmiter)[index]){
+      if (word === this.state.text.split(delimmiter)[index] || word === this.state.text.split(delimmiter)[index + 1]){
         return value
-      } else { return value - 1}
+      } else if (this.state.text.split(delimmiter)[index]) { return value - 1}
     },challengeLength)
 
     console.log(accuracy)
