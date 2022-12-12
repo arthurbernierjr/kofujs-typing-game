@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "coffeescript": "^2.4.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "kofujs": "^1.1.0-alpha",
     "dotenv": "^8.2.0"
   },
